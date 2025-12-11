@@ -14,10 +14,8 @@ for i, line in enumerate(lines):
     for pos in poses:
         if line[pos] == "^":
             splits += 1
-            if pos > 0:
-                new_poses.add(pos-1)
-            if pos < len(line) - 1:
-                new_poses.add(pos + 1)
+            new_poses.add(pos-1)
+            new_poses.add(pos + 1)
         else:
             new_poses.add(pos)
     poses = new_poses
